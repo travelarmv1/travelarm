@@ -661,7 +661,7 @@ body {
   width: 250px;
   background: #090d16;
   border-radius: 20px;
-  padding: 9px;
+  padding: 6px;
   box-shadow: var(--shadow-phone);
   border: 3px solid var(--mockup-rim);
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
