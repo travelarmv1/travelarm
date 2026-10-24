@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="bn" data-lang="bn" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travelarm - স্মার্ট জিপিএস ট্রানজিট অ্যালার্ম | Download Official APK</title>
+  <meta name="description" content="Travelarm - যাত্রাপথে নিশ্চিন্তে ঘুমান, গন্তব্যের আগেই ডেকে দেবে ট্রাভেলার্ম। ডাউনলোড করুন অফিশিয়াল অ্যান্ড্রয়েড APK।">
+  <meta name="theme-color" content="#070a12">
+
+  <!-- Primary SEO Meta -->
+  <meta name="author" content="Travelarm">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Travelarm">
+  <meta property="og:title" content="Travelarm - Smart Transit & Location Alarm | Official APK">
+  <meta property="og:description" content="Never miss your destination bus stop or railway station again. High-accuracy GPS transit alarm with Bangla & English audio alerts and battery-optimized tracking.">
+  <meta property="og:image" content="logo.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="512">
+  <meta property="og:image:height" content="512">
+  <meta property="og:image:alt" content="Travelarm - Smart GPS Transit Alarm Logo & Preview">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Travelarm - Smart Transit & Location Alarm | Official APK">
+  <meta name="twitter:description" content="Never miss your destination bus stop or railway station again. High-accuracy GPS transit alarm with Bangla & English audio alerts and battery-optimized tracking.">
+  <meta name="twitter:image" content="logo.png">
+  <meta name="twitter:image:alt" content="Travelarm - Smart GPS Transit Alarm Logo & Preview">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="apple-touch-icon" href="logo.png">
+
+  <!-- Google Fonts: Hind Siliguri (Bengali) & Plus Jakarta Sans (English) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Dynamic Ambient Mesh Orbs -->
+  <div class="bg-mesh">
+    <div class="mesh-orb mesh-orb-1"></div>
+    <div class="mesh-orb mesh-orb-2"></div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <!-- Brand Logo & Title -->
+      <a href="#" class="brand">
+        <img src="logo.png" alt="Travelarm Logo" class="brand-logo" onerror="this.src='https://raw.githubusercontent.com/s76715939-glitch/Travelarm/main/app/src/main/res/drawable/travelarm_logo.png'">
+        <div class="brand-text-wrap">
+          <span class="brand-title">Travelarm</span>
+          <span class="brand-tagline" data-bn="স্মার্ট ট্রানজিট অ্যালার্ম" data-en="Smart Transit Alarm">স্মার্ট ট্রানজিট অ্যালার্ম</span>
+        </div>
+      </a>
+
+      <!-- Navigation Links -->
+      <ul class="nav-links">
+        <li><a href="#features" class="nav-link" data-bn="ফিচারসমূহ" data-en="Features">ফিচারসমূহ</a></li>
+        <li><a href="#screenshots" class="nav-link" data-bn="স্ক্রিনশট" data-en="Screenshots">স্ক্রিনশট</a></li>
+        <li><a href="#how-it-works" class="nav-link" data-bn="কীভাবে কাজ করে" data-en="How it Works">কীভাবে কাজ করে</a></li>
+        <li><a href="#faq" class="nav-link" data-bn="প্রশ্নোত্তর" data-en="FAQ">প্রশ্নোত্তর</a></li>
+        <li><a href="#download" class="nav-link" data-bn="ডাউনলোড" data-en="Download">ডাউনলোড</a></li>
+      </ul>
+
+      <!-- Controls: Theme Toggle + Language Switcher + Nav CTA -->
+      <div class="nav-controls">
+        <!-- Dark / Light Mode Switcher -->
+        <button class="btn-theme-toggle" id="themeToggleBtn" title="ডার্ক / লাইট মোড পরিবর্তন করুন" aria-label="Toggle Dark / Light Theme">
+          <i class="fa-solid fa-moon" id="themeIcon"></i>
+        </button>
+
+        <!-- Language Switcher -->
+        <div class="lang-switcher" id="langSwitcher" title="ভাষা নির্বাচন / Switch Language">
+          <button class="lang-btn active" data-set-lang="bn">বাংলা</button>
+          <button class="lang-btn" data-set-lang="en">EN</button>
+        </div>
+
+        <!-- Direct Nav Download Button -->
+        <a href="#download" class="btn-nav-download" id="navDownloadBtn">
+          <i class="fa-solid fa-download"></i>
+          <span data-bn="ডাউনলোড" data-en="Download">ডাউনলোড</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container hero-content">
+      
+      <!-- Top Pill Badge -->
+      <div class="hero-badge-pill">
+        <span class="pulse-dot"></span>
+        <span id="versionStatusPill" data-bn="নতুন সংস্করণ উপলব্ধ • v1.0.1" data-en="Latest Release Available • v1.0.1">নতুন সংস্করণ উপলব্ধ • v1.0.1</span>
+      </div>
+
+      <!-- Main Headline -->
+      <h1 class="hero-title">
+        <span data-bn="যাত্রাপথে নিশ্চিন্তে ঘুমান," data-en="Sleep peacefully while traveling,">যাত্রাপথে নিশ্চিন্তে ঘুমান,</span><br>
+        <span class="hero-title-highlight" data-bn="গন্তব্যের আগেই ডেকে দেবে Travelarm" data-en="Travelarm wakes you before your destination">গন্তব্যের আগেই ডেকে দেবে Travelarm</span>
+      </h1>
+
+      <!-- Subtitle Description -->
+      <p class="hero-description" data-bn="বাস, ট্রেন বা যে কোনো যাতায়াতে সঠিক স্টেশনে নামার টেনশন দূর করুন। ব্যাকগ্রাউন্ড জিপিএস ট্র্যাকিং, বাংলা ও ইংরেজি অডিও ভয়েস নোটিফিকেশন এবং ব্যাটারি অপ্টিমাইজড রিয়েল-টাইম দূরত্ব অ্যালার্ট।" data-en="Never miss your bus stop, train station, or destination again. Features background GPS tracking, loud emergency ringtones, bilingual audio alerts, and battery-friendly transit navigation.">
+        বাস, ট্রেন বা যে কোনো যাতায়াতে সঠিক স্টেশনে নামার টেনশন দূর করুন। ব্যাকগ্রাউন্ড জিপিএস ট্র্যাকিং, বাংলা ও ইংরেজি অডিও ভয়েস নোটিফিকেশন এবং ব্যাটারি অপ্টিমাইজড রিয়েল-টাইম দূরত্ব অ্যালার্ট।
+      </p>
+
+      <!-- Primary CTA Group -->
+      <div class="hero-cta-group">
+        <a href="https://github.com/s76715939-glitch/Travelarm/releases/latest/download/travelarm-release.apk" class="btn-primary-download" id="mainDownloadBtn" download>
+          <div class="btn-icon-wrapper">
+            <i class="fa-solid fa-download"></i>
+          </div>
+          <div class="btn-text-block">
+            <span class="btn-sub-label" data-bn="সরাসরি ডাউনলোড করুন" data-en="Direct Download">সরাসরি ডাউনলোড করুন</span>
+            <span class="btn-main-label" id="mainDownloadBtnLabel">Travelarm APK (v1.0.1)</span>
+          </div>
+        </a>
+
+        <a href="#screenshots" class="btn-secondary">
+          <i class="fa-solid fa-mobile-screen"></i>
+          <span data-bn="স্ক্রিনশট দেখুন" data-en="View Screenshots">স্ক্রিনশট দেখুন</span>
+        </a>
+      </div>
+
+      <!-- Redesigned Responsive App Stats & Metadata Grid -->
+      <div class="app-meta-grid">
+        <!-- 1. Version Card -->
+        <div class="meta-card">
+          <div class="meta-icon-circle">
+            <i class="fa-solid fa-code-branch"></i>
+          </div>
+          <div class="meta-info">
+            <span class="meta-label" data-bn="ভার্সন" data-en="Version">ভার্সন</span>
+            <span class="meta-val" id="metaVersionText">v1.0.1</span>
+          </div>
+        </div>
+
+        <!-- 2. Dynamic File Size Card -->
+        <div class="meta-card">
+          <div class="meta-icon-circle">
+            <i class="fa-solid fa-box-archive"></i>
+          </div>
+          <div class="meta-info">
+            <span class="meta-label" data-bn="ফাইল সাইজ" data-en="File Size">ফাইল সাইজ</span>
+            <span class="meta-val" id="metaFileSizeText">16.6 MB</span>
+          </div>
+        </div>
+
+        <!-- 3. OS Support Card -->
+        <div class="meta-card">
+          <div class="meta-icon-circle">
+            <i class="fa-brands fa-android"></i>
+          </div>
+          <div class="meta-info">
+            <span class="meta-label" data-bn="অ্যান্ড্রয়েড" data-en="OS Support">অ্যান্ড্রয়েড</span>
+            <span class="meta-val">Android 7.0+</span>
+          </div>
+        </div>
+
+        <!-- 4. Pricing / Free Card -->
+        <div class="meta-card">
+          <div class="meta-icon-circle">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <div class="meta-info">
+            <span class="meta-label" data-bn="লাইসেন্স" data-en="License">লাইসেন্স</span>
+            <span class="meta-val" data-bn="বিনামূল্যে ব্যবহার" data-en="Free to Use">বিনামূল্যে ব্যবহার</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Screenshots Gallery Section (6 Phones Side-by-Side) -->
+  <section class="screenshots-section" id="screenshots">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">
+          <i class="fa-solid fa-images"></i>
+          <span data-bn="অ্যাপ প্রিভিউ" data-en="App Preview">অ্যাপ প্রিভিউ</span>
+        </span>
+        <h2 class="section-title" data-bn="এক নজরে Travelarm এর ইন্টারফেস" data-en="Take a Look Inside Travelarm">এক নজরে Travelarm এর ইন্টারফেস</h2>
+        <p class="section-subtitle" data-bn="সহজ, আধুনিক এবং যাত্রীদের সুবিধার কথা ভেবে তৈরি আকর্ষণীয় ইউজার ইন্টারফেস।" data-en="Clean, intuitive, and modern user interface tailored specifically for public transit travelers.">
+          সহজ, আধুনিক এবং যাত্রীদের সুবিধার কথা ভেবে তৈরি আকর্ষণীয় ইউজার ইন্টারফেস।
+        </p>
+      </div>
+    </div>
+
+    <!-- Horizontal Scrollable Phone Mockup Row -->
+    <div class="screenshots-scroll-container">
+      <div class="screenshots-row">
+
+        <!-- 1: Normal Map View -->
+        <div class="phone-mockup" onclick="openLightbox('1_normal_map_view.jpg')">
+          <div class="phone-screen">
+            <div class="phone-camera-dot"></div>
+            <img src="1_normal_map_view.jpg" alt="Normal Map View" class="phone-image" loading="lazy">
+          </div>
+          <div class="phone-caption">
+            <h4 class="phone-caption-title" data-bn="১. স্ট্যান্ডার্ড ম্যাপ ভিউ" data-en="1. Standard Map View">১. স্ট্যান্ডার্ড ম্যাপ ভিউ</h4>
+            <p class="phone-caption-desc" data-bn="লাইভ লোকেশন ও মসৃণ ওএসএম ম্যাপ" data-en="Live GPS point & smooth OpenStreetMap">লাইভ লোকেশন ও মসৃণ ওএসএম ম্যাপ</p>
+          </div>
+        </div>
+
+        <!-- 2: Alternate Map View -->
+        <div class="phone-mockup" onclick="openLightbox('2_alter_map_view.jpg')">
+          <div class="phone-screen">
+            <div class="phone-camera-dot"></div>
+            <img src="2_alter_map_view.jpg" alt="Alternate Map View" class="phone-image" loading="lazy">
+          </div>
+          <div class="phone-caption">
+            <h4 class="phone-caption-title" data-bn="২. অল্টারনেট ম্যাপ ভিউ" data-en="2. Alternate Map View">২. অল্টারনেট ম্যাপ ভিউ</h4>
+            <p class="phone-caption-desc" data-bn="হাই-কনট্রাস্ট ও স্পষ্ট রোড নেটওয়ার্ক" data-en="High contrast & clear road network">হাই-কনট্রাস্ট ও স্পষ্ট রোড নেটওয়ার্ক</p>
+          </div>
+        </div>
+
+        <!-- 3: Destination Selected -->
+        <div class="phone-mockup" onclick="openLightbox('3_destination_selected.jpg')">
+          <div class="phone-screen">
+            <div class="phone-camera-dot"></div>
+            <img src="3_destination_selected.jpg" alt="Destination Selected" class="phone-image" loading="lazy">
+          </div>
+          <div class="phone-caption">
+            <h4 class="phone-caption-title" data-bn="৩. গন্তব্য নির্বাচন" data-en="3. Destination Selected">৩. গন্তব্য নির্বাচন</h4>
+            <p class="phone-caption-desc" data-bn="রুট পাথ ও দূরত্বের স্পষ্ট প্রিভিউ" data-en="Route path preview & distance calculation">রুট পাথ ও দূরত্বের স্পষ্ট প্রিভিউ</p>
+          </div>
+        </div>
+
+        <!-- 4: Destination Sheet -->
+        <div class="phone-mockup" onclick="openLightbox('4_destination_sheet.jpg')">
+          <div class="phone-screen">
+            <div class="phone-camera-dot"></div>
+            <img src="4_destination_sheet.jpg" alt="Destination Sheet" class="phone-image" loading="lazy">
+          </div>
+          <div class="phone-caption">
+            <h4 class="phone-caption-title" data-bn="৪. অ্যালার্ম কনফিগারেশন" data-en="4. Alarm Configuration">৪. অ্যালার্ম কনফিগারেশন</h4>
+            <p class="phone-caption-desc" data-bn="দূরত্ব ও কাস্টম সাউন্ড নির্ধারণ" data-en="Threshold radius & custom alert settings">দূরত্ব ও কাস্টম সাউন্ড নির্ধারণ</p>
+          </div>
+        </div>
+
+        <!-- 5: Active Journey -->
+        <div class="phone-mockup" onclick="openLightbox('5_active_journey.jpg')">
+          <div class="phone-screen">
+            <div class="phone-camera-dot"></div>
+            <img src="5_active_journey.jpg" alt="Active Journey" class="phone-image" loading="lazy">
+          </div>
+          <div class="phone-caption">
+            <h4 class="phone-caption-title" data-bn="৫. লাইভ জার্নি ট্র্যাকিং" data-en="5. Active Journey Tracking">৫. লাইভ জার্নি ট্র্যাকিং</h4>
+            <p class="phone-caption-desc" data-bn="রিয়েল-টাইম দূরত্ব ও ওএসআরএম রুট" data-en="Real-time remaining distance & live route">রিয়েল-টাইম দূরত্ব ও ওএসআরএম রুট</p>
+          </div>
+        </div>
+
+        <!-- 6: Alarm Screen -->
+        <div class="phone-mockup" onclick="openLightbox('6_alarm_screen.jpg')">
+          <div class="phone-screen">
+            <div class="phone-camera-dot"></div>
+            <img src="6_alarm_screen.jpg" alt="Alarm Screen" class="phone-image" loading="lazy">
+          </div>
+          <div class="phone-caption">
+            <h4 class="phone-caption-title" data-bn="৬. জরুরি অ্যালার্ম স্ক্রিন" data-en="6. Emergency Alarm Screen">৬. জরুরি অ্যালার্ম স্ক্রিন</h4>
+            <p class="phone-caption-desc" data-bn="বাংলা ভয়েস সতর্কবার্তা ও ফুল অ্যালার্ম" data-en="Loud ringtone, vibration & Bengali voice">বাংলা ভয়েস সতর্কবার্তা ও ফুল অ্যালার্ম</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="scroll-hint-bar">
+      <i class="fa-solid fa-arrows-left-right"></i>
+      <span data-bn="ছবিগুলো বড় করে দেখতে ক্লিক করুন • ডানে-বামে স্ক্রোল করুন" data-en="Click any screenshot to zoom • Scroll horizontally to explore">ছবিগুলো বড় করে দেখতে ক্লিক করুন • ডানে-বামে স্ক্রোল করুন</span>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">
+          <i class="fa-solid fa-bolt"></i>
+          <span data-bn="শক্তিশালী ফিচারসমূহ" data-en="Powerful Features">শক্তিশালী ফিচারসমূহ</span>
+        </span>
+        <h2 class="section-title" data-bn="কেন Travelarm আপনার ভ্রমণের সেরা সঙ্গী?" data-en="Why Travelarm is Your Best Transit Companion?">কেন Travelarm আপনার ভ্রমণের সেরা সঙ্গী?</h2>
+        <p class="section-subtitle" data-bn="বাস, ট্রেন বা যে কোনো যাতায়াতে সঠিক সময়ে আপনাকে সতর্ক করতে যা যা দরকার, সবই আছে এতে।" data-en="Engineered to provide reliable transit geofencing and seamless wake-up alerts on every ride.">
+          বাস, ট্রেন বা যে কোনো যাতায়াতে সঠিক সময়ে আপনাকে সতর্ক করতে যা যা দরকার, সবই আছে এতে।
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <!-- Feature 1 -->
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fa-solid fa-location-crosshairs"></i>
+          </div>
+          <h3 class="feature-title" data-bn="নিখুঁত জিপিএস জিওফেন্সিং" data-en="High Precision Geofencing">নিখুঁত জিপিএস জিওফেন্সিং</h3>
+          <p class="feature-desc" data-bn="ডিভাইসের উচ্চ-ক্ষমতাসম্পন্ন হার্ডওয়্যার জিপিএস ব্যবহার করে গন্তব্যের কত দূর কাছে আছেন তা রিয়েল-টাইমে নিখুঁতভাবে হিসাব করে।" data-en="Accurate location tracking using hardware GPS chips and real-time transit distance computation along your route.">
+            ডিভাইসের উচ্চ-ক্ষমতাসম্পন্ন হার্ডওয়্যার জিপিএস ব্যবহার করে গন্তব্যের কত দূর কাছে আছেন তা রিয়েল-টাইমে নিখুঁতভাবে হিসাব করে।
+          </p>
+        </div>
+
+        <!-- Feature 2: Adjusted Voice Alerts description (No TTS claim) -->
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fa-solid fa-volume-high"></i>
+          </div>
+          <h3 class="feature-title" data-bn="বাংলা ও ইংরেজি অডিও এলার্ট" data-en="Bilingual Audio Alerts">বাংলা ও ইংরেজি অডিও এলার্ট</h3>
+          <p class="feature-desc" data-bn="অ্যালার্মের পাশাপাশি আপনার ভাষায় স্পষ্ট অডিও সতর্কবার্তা বাজবে: 'গন্তব্য সন্নিকটে, নামার প্রস্তুতি নিন' — যাতে স্ক্রিনে না তাকিয়েও বুঝতে পারেন।" data-en="Crisp recorded audio prompts announce in Bengali or English: 'Destination approaching, please prepare to get off' so you know instantly.">
+            অ্যালার্মের পাশাপাশি আপনার ভাষায় স্পষ্ট অডিও সতর্কবার্তা বাজবে: 'গন্তব্য সন্নিকটে, নামার প্রস্তুতি নিন' — যাতে স্ক্রিনে না তাকিয়েও বুঝতে পারেন।
+          </p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fa-solid fa-battery-full"></i>
+          </div>
+          <h3 class="feature-title" data-bn="অপ্টিমাইজড ব্যাটারি সেভার" data-en="Battery Friendly Background Service">অপ্টিমাইজড ব্যাটারি সেভার</h3>
+          <p class="feature-desc" data-bn="স্মার্ট ফোরগ্রাউন্ড সার্ভিস ফোনের স্ক্রিন অফ থাকলেও অবিচলভাবে কাজ করে এবং অপ্টিমাইজড জিপিএস স্যাম্পলিংয়ের কারণে ব্যাটারি খরচ অত্যন্ত কম।" data-en="Runs persistently in foreground mode with screen off without triggering aggressive Android OS kills or draining your battery.">
+            স্মার্ট ফোরগ্রাউন্ড সার্ভিস ফোনের স্ক্রিন অফ থাকলেও অবিচলভাবে কাজ করে এবং অপ্টিমাইজড জিপিএস স্যাম্পলিংয়ের কারণে ব্যাটারি খরচ অত্যন্ত কম।
+          </p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fa-solid fa-bell"></i>
+          </div>
+          <h3 class="feature-title" data-bn="কাস্টম ডিসটেন্স ও রিংটোন" data-en="Custom Radius & Sounds">কাস্টম ডিসটেন্স ও রিংটোন</h3>
+          <p class="feature-desc" data-bn="৫০০ মিটার, ১ কিমি, ২ কিমি বা আপনার প্রয়োজনমতো দূরত্ব নির্ধারণ করুন। ফোনের রিংটোন বা পছন্দের কাস্টম অডিও সেট করুন।" data-en="Set alert triggers from 500m to 2km or custom distance. Choose system alarm ringtones or custom audio files.">
+            ৫০০ মিটার, ১ কিমি, ২ কিমি বা আপনার প্রয়োজনমতো দূরত্ব নির্ধারণ করুন। ফোনের রিংটোন বা পছন্দের কাস্টম অডিও সেট করুন।
+          </p>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fa-solid fa-bus-simple"></i>
+          </div>
+          <h3 class="feature-title" data-bn="বাংলাদেশের প্রধান ট্রানজিট হাব" data-en="Preloaded Transit Hubs">বাংলাদেশের প্রধান ট্রানজিট হাব</h3>
+          <p class="feature-desc" data-bn="দেশের প্রধান প্রধান বাস টার্মিনাল, রেলস্টেশন ও জনপ্রিয় স্টপেজ মুহূর্তেই সার্চ করার জন্য দ্রুতগতির ডেটাবেস।" data-en="Quickly search and pick popular bus stations, train stations, and intersections across Bangladesh.">
+            দেশের প্রধান প্রধান বাস টার্মিনাল, রেলস্টেশন ও জনপ্রিয় স্টপেজ মুহূর্তেই সার্চ করার জন্য দ্রুতগতির ডেটাবেস।
+          </p>
+        </div>
+
+        <!-- Feature 6: Replaced with Smart Live Route & Distance -->
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fa-solid fa-route"></i>
+          </div>
+          <h3 class="feature-title" data-bn="স্মার্ট রুট ও লাইভ ট্র্যাকিং" data-en="Live Transit Route Tracking">স্মার্ট রুট ও লাইভ ট্র্যাকিং</h3>
+          <p class="feature-desc" data-bn="লাইভ দূরত্ব, আনুমানিক সময় এবং সরাসরি ওএসআরএম রুট ম্যাপের সাথে যুক্ত থেকে আপনাকে সবসময় সঠিক ট্র্যাকে পরিচালিত করে।" data-en="Visualizes full transit road routes using live OSRM navigation data and continuously shows remaining distance and ETA.">
+            লাইভ দূরত্ব, আনুমানিক সময় এবং সরাসরি ওএসআরএম রুট ম্যাপের সাথে যুক্ত থেকে আপনাকে সবসময় সঠিক ট্র্যাকে পরিচালিত করে।
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="how-it-works-section" id="how-it-works">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">
+          <i class="fa-solid fa-list-check"></i>
+          <span data-bn="ব্যবহার পদ্ধতি" data-en="Simple 3 Steps">ব্যবহার পদ্ধতি</span>
+        </span>
+        <h2 class="section-title" data-bn="কীভাবে কাজ করে Travelarm?" data-en="How Does Travelarm Work?">কীভাবে কাজ করে Travelarm?</h2>
+        <p class="section-subtitle" data-bn="মাত্র তিনটি সহজ ধাপে আপনার ট্রাভেল অ্যালার্ম সেট করে ফেলুন।" data-en="Set up your journey in seconds and travel with peace of mind.">
+          মাত্র তিনটি সহজ ধাপে আপনার ট্রাভেল অ্যালার্ম সেট করে ফেলুন।
+        </p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-badge" data-bn="১" data-en="1">১</div>
+          <h3 class="step-title" data-bn="গন্তব্য খুঁজুন বা ট্যাপ করুন" data-en="Pick Your Destination">গন্তব্য খুঁজুন বা ট্যাপ করুন</h3>
+          <p class="step-desc" data-bn="ম্যাপের সার্চ বারে আপনার গন্তব্য লিখুন অথবা ম্যাপের যেকোনো পয়েন্টে সরাসরি ট্যাপ করে ডেস্টিনেশন নির্ধারণ করুন।" data-en="Type your target bus stop/station in the search bar or simply tap anywhere on the interactive map.">
+            ম্যাপের সার্চ বারে আপনার গন্তব্য লিখুন অথবা ম্যাপের যেকোনো পয়েন্টে সরাসরি ট্যাপ করে ডেস্টিনেশন নির্ধারণ করুন।
+          </p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-badge" data-bn="২" data-en="2">২</div>
+          <h3 class="step-title" data-bn="অ্যালার্মের দূরত্ব সেট করুন" data-en="Configure Alert Threshold">অ্যালার্মের দূরত্ব সেট করুন</h3>
+          <p class="step-desc" data-bn="গন্তব্যের কতটুকু আগে অ্যালার্ম বাজবে (যেমন ১ কিমি বা ৫০০ মিটার) তা সিলেক্ট করুন এবং জার্নি শুরু করুন।" data-en="Select how far ahead you want to be alerted (e.g., 500m or 1km) and customize sound & vibration.">
+            গন্তব্যের কতটুকু আগে অ্যালার্ম বাজবে (যেমন ১ কিমি বা ৫০০ মিটার) তা সিলেক্ট করুন এবং জার্নি শুরু করুন।
+          </p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-badge" data-bn="৩" data-en="3">৩</div>
+          <h3 class="step-title" data-bn="নিশ্চিন্তে ঘুমান বা গান শুনুন" data-en="Relax & Travel Freely">নিশ্চিন্তে ঘুমান বা গান শুনুন</h3>
+          <p class="step-desc" data-bn="বাসে-ট্রেনে ঘুমিয়ে পড়ুন! নির্ধারিত সীমানায় পৌঁছামাত্র জোরালো রিংটোন ও অডিও ভয়েস আপনাকে ডেকে দেবে।" data-en="Close your eyes or enjoy your playlist! Travelarm wakes you up with loud rings & audio alerts on time.">
+            বাসে-ট্রেনে ঘুমিয়ে পড়ুন! নির্ধারিত সীমানায় পৌঁছামাত্র জোরালো রিংটোন ও অডিও ভয়েস আপনাকে ডেকে দেবে।
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Changelog & Release Notes Section -->
+  <section class="changelog-section">
+    <div class="container">
+      <div class="changelog-card">
+        <div class="changelog-header">
+          <h3 class="changelog-title">
+            <i class="fa-solid fa-file-lines" style="color: var(--accent-emerald)"></i>
+            <span data-bn="সর্বশেষ সংস্করণের পরিবর্তনসমূহ" data-en="Latest Release Notes">সর্বশেষ সংস্করণের পরিবর্তনসমূহ</span>
+          </h3>
+          <span class="changelog-badge" id="notesVersionBadge">v1.0.1</span>
+        </div>
+        <p class="changelog-content" id="dynamicReleaseNotes">
+          Travelarm এর ভার্সন সিস্টেম টেষ্ট করার জন্য আপডেট। নতুন ইন-অ্যাপ আপডেট ডায়ালগ ও পারফরম্যান্স উন্নয়ন।
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Frequently Asked Questions (FAQ) Section -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">
+          <i class="fa-solid fa-circle-question"></i>
+          <span data-bn="সাধারণ জিজ্ঞাসা" data-en="Common Queries">সাধারণ জিজ্ঞাসা</span>
+        </span>
+        <h2 class="section-title" data-bn="সচরাচর জিজ্ঞাসিত প্রশ্নসমূহ (FAQ)" data-en="Frequently Asked Questions">সচরাচর জিজ্ঞাসিত প্রশ্নসমূহ (FAQ)</h2>
+        <p class="section-subtitle" data-bn="Travelarm ব্যবহার সম্পর্কে ব্যবহারকারীদের সবচেয়ে সাধারণ কিছু প্রশ্নের সহজ উত্তর।" data-en="Quick and clear answers to everything you need to know about using Travelarm.">
+          Travelarm ব্যবহার সম্পর্কে ব্যবহারকারীদের সবচেয়ে সাধারণ কিছু প্রশ্নের সহজ উত্তর।
+        </p>
+      </div>
+
+      <div class="faq-accordion">
+        <!-- FAQ 1: How does it track location? -->
+        <div class="faq-item active">
+          <button class="faq-header" type="button" aria-expanded="true">
+            <div class="faq-question-wrap">
+              <div class="faq-question-icon">
+                <i class="fa-solid fa-satellite-dish"></i>
+              </div>
+              <span class="faq-question-text" data-bn="লোকেশন কীভাবে ট্র্যাক করে?" data-en="How does it track location?">লোকেশন কীভাবে ট্র্যাক করে?</span>
+            </div>
+            <div class="faq-chevron">
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+          </button>
+          <div class="faq-body">
+            <div class="faq-body-inner">
+              <p class="faq-answer-text" data-bn="Travelarm সরাসরি আপনার ফোনের অভ্যন্তরীণ হার্ডওয়্যার জিপিএস (Hardware GPS) এবং অপ্টিমাইজড ওএসআরএম রুট অ্যালগরিদম ব্যবহার করে। এটি রিয়েল-টাইমে আপনার গাড়ির গতি এবং নির্ধারিত গন্তব্য থেকে অবশিষ্ট দূরত্ব নির্ভুলভাবে পরিমাপ করে।" data-en="Travelarm directly accesses your device's onboard hardware GPS receiver and optimized transit route algorithms to measure live distance and compute accurate arrival boundaries in real time.">
+                Travelarm সরাসরি আপনার ফোনের অভ্যন্তরীণ হার্ডওয়্যার জিপিএস (Hardware GPS) এবং অপ্টিমাইজড ওএসআরএম রুট অ্যালগরিদম ব্যবহার করে। এটি রিয়েল-টাইমে আপনার গাড়ির গতি এবং নির্ধারিত গন্তব্য থেকে অবশিষ্ট দূরত্ব নির্ভুলভাবে পরিমাপ করে।
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 2: Does it work offline? -->
+        <div class="faq-item">
+          <button class="faq-header" type="button" aria-expanded="false">
+            <div class="faq-question-wrap">
+              <div class="faq-question-icon">
+                <i class="fa-solid fa-wifi"></i>
+              </div>
+              <span class="faq-question-text" data-bn="ইন্টারনেট ছাড়া বা অফলাইনে কি কাজ করবে?" data-en="Does it work offline?">ইন্টারনেট ছাড়া বা অফলাইনে কি কাজ করবে?</span>
+            </div>
+            <div class="faq-chevron">
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+          </button>
+          <div class="faq-body">
+            <div class="faq-body-inner">
+              <p class="faq-answer-text" data-bn="হ্যাঁ, সম্পূর্ণভাবে কাজ করবে! গন্তব্য সেট করে জার্নি শুরু করার পর আপনার মোবাইল ডেটা বা ইন্টারনেট সম্পূর্ণ বন্ধ থাকলেও শুধু স্যাটেলাইট জিপিএস সিগন্যাল ব্যবহার করে এটি নিখুঁত দূরত্বে পৌঁছামাত্র অ্যালার্ম বাজিয়ে দেবে।" data-en="Yes, absolutely! Once your destination is selected and journey starts, Travelarm can track your progress and trigger loud wake-up alarms using pure hardware GPS satellites, even without cellular data or Wi-Fi.">
+                হ্যাঁ, সম্পূর্ণভাবে কাজ করবে! গন্তব্য সেট করে জার্নি শুরু করার পর আপনার মোবাইল ডেটা বা ইন্টারনেট সম্পূর্ণ বন্ধ থাকলেও শুধু স্যাটেলাইট জিপিএস সিগন্যাল ব্যবহার করে এটি নিখুঁত দূরত্বে পৌঁছামাত্র অ্যালার্ম বাজিয়ে দেবে।
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 3: Is it safe to use? -->
+        <div class="faq-item">
+          <button class="faq-header" type="button" aria-expanded="false">
+            <div class="faq-question-wrap">
+              <div class="faq-question-icon">
+                <i class="fa-solid fa-user-shield"></i>
+              </div>
+              <span class="faq-question-text" data-bn="অ্যাপটি ব্যবহার করা কি নিরাপদ ও গোপনীয়?" data-en="Is it safe to use?">অ্যাপটি ব্যবহার করা কি নিরাপদ ও গোপনীয়?</span>
+            </div>
+            <div class="faq-chevron">
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+          </button>
+          <div class="faq-body">
+            <div class="faq-body-inner">
+              <p class="faq-answer-text" data-bn="১০০% নিরাপদ ও সুরক্ষিত। অ্যাপটিতে কোনো অ্যাকাউন্ট বা সাইন-ইন করতে হয় না। আপনার ব্যক্তিগত অবস্থান বা ভ্রমণের কোনো তথ্য কখনোই ইন্টারনেটে বা কোনো সার্ভারে পাঠানো হয় না—সবকিছু আপনার ডিভাইসের মধ্যেই সুরক্ষিত থাকে।" data-en="100% safe and private. No user account, registration, or sign-in is required. Your travel destinations and live location data are processed strictly locally on your phone and never transmitted to external servers.">
+                ১০০% নিরাপদ ও সুরক্ষিত। অ্যাপটিতে কোনো অ্যাকাউন্ট বা সাইন-ইন করতে হয় না। আপনার ব্যক্তিগত অবস্থান বা ভ্রমণের কোনো তথ্য কখনোই ইন্টারনেটে বা কোনো সার্ভারে পাঠানো হয় না—সবকিছু আপনার ডিভাইসের মধ্যেই সুরক্ষিত থাকে।
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 4: Battery consumption -->
+        <div class="faq-item">
+          <button class="faq-header" type="button" aria-expanded="false">
+            <div class="faq-question-wrap">
+              <div class="faq-question-icon">
+                <i class="fa-solid fa-battery-three-quarters"></i>
+              </div>
+              <span class="faq-question-text" data-bn="দীর্ঘ যাত্রায় ফোনের ব্যাটারি কি বেশি খরচ হবে?" data-en="Does it drain battery on long trips?">দীর্ঘ যাত্রায় ফোনের ব্যাটারি কি বেশি খরচ হবে?</span>
+            </div>
+            <div class="faq-chevron">
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+          </button>
+          <div class="faq-body">
+            <div class="faq-body-inner">
+              <p class="faq-answer-text" data-bn="একদমই না। Travelarm এ রয়েছে বুদ্ধিমান অ্যাডাপ্টিভ জিপিএস সিস্টেম। গন্তব্য যখন অনেক দূরে থাকে তখন এটি শক্তি সঞ্চয়কারী মোডে অবস্থান পরীক্ষা করে, ফলে দীর্ঘ সময় জার্নি করলেও ব্যাটারি ড্রেন হওয়ার কোনো ভয় নেই।" data-en="Not at all. Travelarm incorporates intelligent adaptive polling that throttles GPS consumption when you are far away from your destination, conserving battery life across hours of continuous travel.">
+                একদমই না। Travelarm এ রয়েছে বুদ্ধিমান অ্যাডাপ্টিভ জিপিএস সিস্টেম। গন্তব্য যখন অনেক দূরে থাকে তখন এটি শক্তি সঞ্চয়কারী মোডে অবস্থান পরীক্ষা করে, ফলে দীর্ঘ সময় জার্নি করলেও ব্যাটারি ড্রেন হওয়ার কোনো ভয় নেই।
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 5: Silent Mode / Screen Lock -->
+        <div class="faq-item">
+          <button class="faq-header" type="button" aria-expanded="false">
+            <div class="faq-question-wrap">
+              <div class="faq-question-icon">
+                <i class="fa-solid fa-bell-slash"></i>
+              </div>
+              <span class="faq-question-text" data-bn="ফোন সাইলেন্ট থাকলে বা স্ক্রিন অফ থাকলে কি অ্যালার্ম বাজবে?" data-en="Will it ring in Silent Mode or Screen Off?">ফোন সাইলেন্ট থাকলে বা স্ক্রিন অফ থাকলে কি অ্যালার্ম বাজবে?</span>
+            </div>
+            <div class="faq-chevron">
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+          </button>
+          <div class="faq-body">
+            <div class="faq-body-inner">
+              <p class="faq-answer-text" data-bn="হ্যাঁ, অবশ্যই! অ্যাপটির ব্যাকগ্রাউন্ড সার্ভিস অ্যান্ড্রয়েডের অ্যালার্ম অডিও চ্যানেলের মাধ্যমে বাজানো হয়, যার ফলে ফোন সাইলেন্ট মোডে থাকলেও বা স্ক্রিন লক থাকলেও তীব্র রিংটোন, ভাইব্রেশন ও অডিও এলার্ট আপনাকে সঠিক সময়ে ডেকে তুলবে।" data-en="Yes, absolutely! The background service routes audio through Android's dedicated alarm channel with screen wake-lock, guaranteeing loud ringtones, vibration, and voice prompts even when your phone is locked or set to silent.">
+                হ্যাঁ, অবশ্যই! অ্যাপটির ব্যাকগ্রাউন্ড সার্ভিস অ্যান্ড্রয়েডের অ্যালার্ম অডিও চ্যানেলের মাধ্যমে বাজানো হয়, যার ফলে ফোন সাইলেন্ট মোডে থাকলেও বা স্ক্রিন লক থাকলেও তীব্র রিংটোন, ভাইব্রেশন ও অডিও এলার্ট আপনাকে সঠিক সময়ে ডেকে তুলবে।
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Download & QR Code Section (Clean Text without open source / no ads) -->
+  <section class="download-section" id="download">
+    <div class="container">
+      <div class="download-banner">
+        <div class="download-banner-info">
+          <h2 class="banner-title" data-bn="আজই ডাউনলোড করুন Travelarm" data-en="Download Travelarm Today">আজই ডাউনলোড করুন Travelarm</h2>
+          <p class="banner-desc" data-bn="সম্পূর্ণ বিনামূল্যে ব্যবহার করুন, কোনো লগইন বা অ্যাকাউন্টের ঝামেলা নেই। এক ক্লিকে ডাউনলোড করুন এবং যাত্রাকে করুন উদ্বেগহীন ও নিরাপদ।" data-en="Completely free to use with zero registration or sign-in hassle. Download with one click and make your travels relaxed and worry-free.">
+            সম্পূর্ণ বিনামূল্যে ব্যবহার করুন, কোনো লগইন বা অ্যাকাউন্টের ঝামেলা নেই। এক ক্লিকে ডাউনলোড করুন এবং যাত্রাকে করুন উদ্বেগহীন ও নিরাপদ।
+          </p>
+
+          <div class="hero-cta-group" style="justify-content: flex-start; margin-bottom: 0;">
+            <a href="https://github.com/s76715939-glitch/Travelarm/releases/latest/download/travelarm-release.apk" class="btn-primary-download" id="bottomDownloadBtn" download>
+              <div class="btn-icon-wrapper">
+                <i class="fa-solid fa-download"></i>
+              </div>
+              <div class="btn-text-block">
+                <span class="btn-sub-label" data-bn="ইনস্টলার ফাইল" data-en="Package File">ইনস্টলার ফাইল</span>
+                <span class="btn-main-label" id="bottomDownloadBtnLabel">ডাউনলোড APK (v1.0.1)</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- QR Code for Mobile Scanning -->
+        <div class="qr-box">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://github.com/s76715939-glitch/Travelarm/releases/latest/download/travelarm-release.apk" alt="Download QR Code" class="qr-code-img" id="qrCodeImg">
+          <span class="qr-caption">
+            <i class="fa-solid fa-qrcode"></i>
+            <span data-bn="ফোনে স্ক্যান করে ডাউনলোড" data-en="Scan with phone">ফোনে স্ক্যান করে ডাউনলোড</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clean Independent Footer (No GitHub links) -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <a href="#" class="footer-brand">
+        <img src="logo.png" alt="Travelarm" onerror="this.src='https://raw.githubusercontent.com/s76715939-glitch/Travelarm/main/app/src/main/res/drawable/travelarm_logo.png'">
+        <span>Travelarm</span>
+      </a>
+
+      <p class="footer-subtitle" data-bn="গণপরিবহন ও দূরপাল্লার যাত্রীদের জন্য নিবেদিত স্মার্ট ট্রানজিট অ্যালার্ম।" data-en="Dedicated smart transit location alarm for daily commuters and travelers.">
+        গণপরিবহন ও দূরপাল্লার যাত্রীদের জন্য নিবেদিত স্মার্ট ট্রানজিট অ্যালার্ম।
+      </p>
+
+      <ul class="footer-links">
+        <li><a href="#features" data-bn="ফিচারসমূহ" data-en="Features">ফিচারসমূহ</a></li>
+        <li><a href="#screenshots" data-bn="স্ক্রিনশট" data-en="Screenshots">স্ক্রিনশট</a></li>
+        <li><a href="#how-it-works" data-bn="কীভাবে কাজ করে" data-en="How it Works">কীভাবে কাজ করে</a></li>
+        <li><a href="#faq" data-bn="প্রশ্নোত্তর" data-en="FAQ">প্রশ্নোত্তর</a></li>
+        <li><a href="#download" data-bn="ডাউনলোড" data-en="Download">ডাউনলোড</a></li>
+      </ul>
+
+      <p class="footer-copy">
+        &copy; <span id="currentYear">2026</span> Travelarm. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal for Fullscreen Screenshots -->
+  <div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox(event)">
+    <button class="lightbox-close" onclick="closeLightbox(event)">&times;</button>
+    <img src="" alt="Screenshot Full View" class="lightbox-img" id="lightboxImg">
+  </div>
+
+  <!-- Dynamic JS Script -->
+  <script>
+    // State
+    let currentLanguage = 'bn';
+    let currentTheme = 'dark';
+    let remoteVersionData = {
+      latestVersionName: "1.0.1",
+      latestVersionCode: 2,
+      apkUrl: "https://github.com/s76715939-glitch/Travelarm/releases/latest/download/travelarm-release.apk",
+      releaseNotesBn: "Travelarm এর ভার্সন সিস্টেম টেষ্ট করার জন্য আপডেট। নতুন ইন-অ্যাপ আপডেট ডায়ালগ ও পারফরম্যান্স উন্নয়ন।",
+      releaseNotesEn: "Update for testing Travelarm version system. New in-app update dialog and performance improvements.",
+      forceUpdate: true
+    };
+
+    // Update Year
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    // ------------------------------------------------------------------------
+    // Theme Switcher (Dark / Light)
+    // ------------------------------------------------------------------------
+    const themeToggleBtn = document.getElementById('themeToggleBtn');
+    const themeIcon = document.getElementById('themeIcon');
+
+    function applyTheme(theme) {
+      currentTheme = theme;
+      document.documentElement.setAttribute('data-theme', theme);
+      if (theme === 'light') {
+        themeIcon.className = 'fa-solid fa-sun';
+        themeToggleBtn.setAttribute('title', 'ডার্ক মোড চালু করুন / Switch to Dark Mode');
+      } else {
+        themeIcon.className = 'fa-solid fa-moon';
+        themeToggleBtn.setAttribute('title', 'লাইট মোড চালু করুন / Switch to Light Mode');
+      }
+      try {
+        localStorage.setItem('travelarm_theme', theme);
+      } catch (e) {}
+    }
+
+    if (themeToggleBtn) {
+      themeToggleBtn.addEventListener('click', () => {
+        const nextTheme = (currentTheme === 'dark') ? 'light' : 'dark';
+        applyTheme(nextTheme);
+      });
+    }
+
+    // Load saved theme
+    try {
+      const savedTheme = localStorage.getItem('travelarm_theme');
+      if (savedTheme === 'light' || savedTheme === 'dark') {
+        applyTheme(savedTheme);
+      } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+        applyTheme('light');
+      }
+    } catch (e) {}
+
+    // ------------------------------------------------------------------------
+    // Language Switcher
+    // ------------------------------------------------------------------------
+    const langButtons = document.querySelectorAll('[data-set-lang]');
+    function setLanguage(lang) {
+      currentLanguage = lang;
+      document.documentElement.setAttribute('lang', lang);
+      document.documentElement.setAttribute('data-lang', lang);
+
+      langButtons.forEach(btn => {
+        if (btn.getAttribute('data-set-lang') === lang) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+
+      // Update text with data-bn and data-en
+      document.querySelectorAll('[data-bn]').forEach(el => {
+        const text = (lang === 'bn') ? el.getAttribute('data-bn') : el.getAttribute('data-en');
+        if (text) {
+          el.textContent = text;
+        }
+      });
+
+      // Update dynamic notes & labels
+      updateReleaseNotesText();
+      updateButtonLabels();
+
+      try {
+        localStorage.setItem('travelarm_lang', lang);
+      } catch (e) {}
+    }
+
+    langButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        setLanguage(btn.getAttribute('data-set-lang'));
+      });
+    });
+
+    // Check saved language
+    try {
+      const savedLang = localStorage.getItem('travelarm_lang');
+      if (savedLang === 'en' || savedLang === 'bn') {
+        setLanguage(savedLang);
+      }
+    } catch (e) {}
+
+    // ------------------------------------------------------------------------
+    // Dynamic Labels & Version Info
+    // ------------------------------------------------------------------------
+    function updateButtonLabels() {
+      const ver = remoteVersionData.latestVersionName || "1.0.1";
+      const mainBtnLabel = document.getElementById('mainDownloadBtnLabel');
+      const bottomBtnLabel = document.getElementById('bottomDownloadBtnLabel');
+      const metaVersion = document.getElementById('metaVersionText');
+
+      if (mainBtnLabel) {
+        mainBtnLabel.textContent = `Travelarm APK (v${ver})`;
+      }
+      if (bottomBtnLabel) {
+        bottomBtnLabel.textContent = (currentLanguage === 'bn') 
+          ? `ডাউনলোড APK (v${ver})` 
+          : `Download APK (v${ver})`;
+      }
+      if (metaVersion) {
+        metaVersion.textContent = `v${ver}`;
+      }
+
+      const notesVer = document.getElementById('notesVersionBadge');
+      if (notesVer) notesVer.textContent = `v${ver}`;
+
+      const pill = document.getElementById('versionStatusPill');
+      if (pill) {
+        pill.setAttribute('data-bn', `নতুন সংস্করণ উপলব্ধ • v${ver}`);
+        pill.setAttribute('data-en', `Latest Release Available • v${ver}`);
+        pill.textContent = (currentLanguage === 'bn') 
+          ? `নতুন সংস্করণ উপলব্ধ • v${ver}` 
+          : `Latest Release Available • v${ver}`;
+      }
+    }
+
+    function updateReleaseNotesText() {
+      const notesEl = document.getElementById('dynamicReleaseNotes');
+      if (!notesEl) return;
+      if (currentLanguage === 'bn') {
+        notesEl.textContent = remoteVersionData.releaseNotesBn || remoteVersionData.releaseNotes || "নতুন সংস্করণ উপলব্ধ।";
+      } else {
+        notesEl.textContent = remoteVersionData.releaseNotesEn || remoteVersionData.releaseNotes || "New version available.";
+      }
+    }
+
+    function applyDownloadUrl(url) {
+      if (!url) return;
+      const mainBtn = document.getElementById('mainDownloadBtn');
+      const bottomBtn = document.getElementById('bottomDownloadBtn');
+      const navBtn = document.getElementById('navDownloadBtn');
+      const qrImg = document.getElementById('qrCodeImg');
+
+      if (mainBtn) mainBtn.href = url;
+      if (bottomBtn) bottomBtn.href = url;
+      if (navBtn) navBtn.href = url;
+      if (qrImg) {
+        qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(url)}`;
+      }
+
+      // Dynamically fetch and calculate APK size
+      fetchApkFileSize();
+    }
+
+    // Dynamic File Size calculation directly from GitHub Releases API
+    async function fetchApkFileSize() {
+      const sizeEl = document.getElementById('metaFileSizeText');
+      if (!sizeEl) return;
+
+      try {
+        const ghApiUrl = 'https://api.github.com/repos/s76715939-glitch/Travelarm/releases/latest';
+        const response = await fetch(ghApiUrl);
+        if (response.ok) {
+          const releaseData = await response.json();
+          if (releaseData.assets && releaseData.assets.length > 0) {
+            const apkAsset = releaseData.assets.find(a => a.name && a.name.endsWith('.apk'));
+            if (apkAsset && apkAsset.size) {
+              const mb = (apkAsset.size / (1024 * 1024)).toFixed(1);
+              sizeEl.textContent = `${mb} MB`;
+            }
+          }
+        }
+      } catch (err) {
+        console.log("Could not query GitHub Releases API for dynamic size", err);
+      }
+    }
+
+    // Fetch version.json from GitHub raw or local fallback
+    async function fetchVersionInfo() {
+      const GITHUB_RAW_URL = 'https://raw.githubusercontent.com/s76715939-glitch/Travelarm/main/version.json';
+      const LOCAL_FALLBACK_URL = '../version.json';
+
+      try {
+        let response = null;
+        try {
+          response = await fetch(`${GITHUB_RAW_URL}?t=${Date.now()}`, { cache: 'no-cache' });
+        } catch (netErr) {
+          response = await fetch(`${LOCAL_FALLBACK_URL}?t=${Date.now()}`);
+        }
+
+        if (response && response.ok) {
+          const data = await response.json();
+          remoteVersionData = Object.assign(remoteVersionData, data);
+          
+          if (data.apkUrl) {
+            applyDownloadUrl(data.apkUrl);
+          }
+          updateButtonLabels();
+          updateReleaseNotesText();
+        }
+      } catch (e) {
+        console.error("Error fetching version info:", e);
+      }
+    }
+
+    // ------------------------------------------------------------------------
+    // Lightbox modal functionality
+    // ------------------------------------------------------------------------
+    function openLightbox(imageSrc) {
+      const modal = document.getElementById('lightboxModal');
+      const modalImg = document.getElementById('lightboxImg');
+      if (modal && modalImg) {
+        modalImg.src = imageSrc;
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeLightbox(e) {
+      if (e.target.id === 'lightboxModal' || e.target.classList.contains('lightbox-close')) {
+        const modal = document.getElementById('lightboxModal');
+        if (modal) {
+          modal.classList.remove('active');
+          document.body.style.overflow = 'auto';
+        }
+      }
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        const modal = document.getElementById('lightboxModal');
+        if (modal && modal.classList.contains('active')) {
+          modal.classList.remove('active');
+          document.body.style.overflow = 'auto';
+        }
+      }
+    });
+
+    // ------------------------------------------------------------------------
+    // Intersection Observer for Smooth 'fade-in-up' Scroll Animation
+    // ------------------------------------------------------------------------
+    function setupScrollAnimations() {
+      const animatedCards = document.querySelectorAll('.feature-card, .step-card, .faq-item');
+      if (!animatedCards.length) return;
+
+      if ('IntersectionObserver' in window) {
+        animatedCards.forEach((card, index) => {
+          card.classList.add('animate-fade-up');
+          // Add smooth cascading stagger delay (0.08s)
+          const delay = (index % 3) * 0.08;
+          card.style.transitionDelay = `${delay}s`;
+        });
+
+        const observerOptions = {
+          root: null,
+          rootMargin: '0px 0px -40px 0px',
+          threshold: 0.12
+        };
+
+        const observer = new IntersectionObserver((entries, obs) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              obs.unobserve(entry.target);
+            }
+          });
+        }, observerOptions);
+
+        animatedCards.forEach(card => observer.observe(card));
+      } else {
+        // Fallback for older browsers
+        animatedCards.forEach(card => card.classList.add('visible'));
+      }
+    }
+
+    // ------------------------------------------------------------------------
+    // Interactive FAQ Accordion Functionality
+    // ------------------------------------------------------------------------
+    function setupFaqAccordion() {
+      const faqHeaders = document.querySelectorAll('.faq-header');
+      faqHeaders.forEach(header => {
+        header.addEventListener('click', () => {
+          const faqItem = header.closest('.faq-item');
+          const isCurrentlyActive = faqItem.classList.contains('active');
+
+          // Close other open FAQ items for a clean single-open accordion experience
+          document.querySelectorAll('.faq-item.active').forEach(activeItem => {
+            if (activeItem !== faqItem) {
+              activeItem.classList.remove('active');
+              const btn = activeItem.querySelector('.faq-header');
+              if (btn) btn.setAttribute('aria-expanded', 'false');
+            }
+          });
+
+          // Toggle clicked item
+          if (isCurrentlyActive) {
+            faqItem.classList.remove('active');
+            header.setAttribute('aria-expanded', 'false');
+          } else {
+            faqItem.classList.add('active');
+            header.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+    }
+
+    // Run on startup
+    document.addEventListener('DOMContentLoaded', () => {
+      updateButtonLabels();
+      updateReleaseNotesText();
+      fetchVersionInfo();
+      fetchApkFileSize();
+      setupScrollAnimations();
+      setupFaqAccordion();
+    });
+  </script>
+</body>
+</html>
