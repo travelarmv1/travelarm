@@ -813,8 +813,8 @@
 
     // Fetch version.json from GitHub raw or local fallback
     async function fetchVersionInfo() {
-      const GITHUB_RAW_URL = 'https://raw.githubusercontent.com/s76715939-glitch/Travelarm/main/version.json';
-      const LOCAL_FALLBACK_URL = '../version.json';
+      const GITHUB_RAW_URL = 'https://travelarm.onrender.com/version';
+      const LOCAL_FALLBACK_URL = '/version.json';
 
       try {
         let response = null;

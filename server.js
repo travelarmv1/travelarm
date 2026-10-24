@@ -6,6 +6,7 @@ const app = express();
 const HOST = '0.0.0.0';
 const PORT = 3000;
 const APK_URL = 'https://github.com/s76715939-glitch/Travelarm/releases/latest/download/travelarm-release.apk';
+const JSON_URL = 'https://raw.githubusercontent.com/s76715939-glitch/Travelarm/main/version.json';
 // Serve index.html at root
 app.use(express.static(__dirname));
 app.get('/', (req, res) => {
@@ -40,6 +41,30 @@ app.get('/download', async (req, res) => {
   }
 });
 
+app.get('/version', async (req, res) => {
+  try {
+    const response = await fetch(JSON_URL);
+
+    if (!response.ok || !response.body) {
+      return res.status(502).send('JSON fetch failed');
+    }
+
+    res.setHeader('Content-Type', 'application/json; charset=utf-8');
+    res.setHeader('Content-Disposition', 'inline');
+    res.setHeader('Cache-Control', 'no-store');
+
+    const { Readable } = require('node:stream');
+    Readable.fromWeb(response.body).pipe(res);
+  } catch (error) {
+    console.error('JSON fetch error:', error.message);
+
+    if (!res.headersSent) {
+      res.status(502).send('Unable to fetch JSON');
+    } else {
+      res.destroy(error);
+    }
+  }
+});
 
 // Start server
 app.listen(PORT, HOST, () => {
